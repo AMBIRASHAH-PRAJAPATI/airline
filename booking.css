@@ -1,0 +1,123 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/a2/a5/fa/a2a5fa40d773c1d9af8868fe9ff530fe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* https://th.bing.com/th/id/R.092534598919c18e24783642bb332c7d?rik=umI2rBOA23d1Ag&riu=http%3a%2f%2fwonderfulengineering.com%2fwp-content%2fuploads%2f2014%2f05%2fairplane-wallpaper-1.jpg&ehk=L2daLCtEHRtyyWTdrRpgn9tudRO2bVoXXoo%2b0wbHpxs%3d&risl=&pid=ImgRaw&r=0 */
+
+.container , form{
+    padding-top: 30px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    
+}
+ 
+#form {
+    background-color: #000;
+    /* height: 500px; */
+    width: 90%;
+    padding: 30px 30px 30px 50px;
+    opacity: 0.7;
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    box-sizing: border-box;
+}
+
+/* .flx{
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; */
+    /* text-align: center; 
+}*/
+
+
+#input2 #small {
+    width: 210px;
+    margin: 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+#input3 #small, .btn {
+    margin: 25px 15px 25px 25px;
+}
+
+#medium {
+    width: 330px;
+    margin: 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+#large {
+    width: 685px;
+    margin: 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+.input6{
+    text-align: center;
+    
+}
+
+::placeholder {
+    color: #fff;
+}
+form h1{
+    font-weight: 700;
+    padding: 10px;
+}
+.inp-heading h3{
+    border-bottom: 2px solid #3399ff;
+    width: 220px;
+    padding: 5px;
+}
+@media (max-width: 500px) {
+    .container{
+        padding: 30px 0% 0% 0%;
+    }
+    #large,#medium{
+        width: 300px;
+        margin-right: 0%;
+    }
+    #input3 #small{
+        margin: 0%;
+    }
+    
+    #form{
+        margin: 0px;
+        padding: 5px;
+        width:100%;
+    }
+    .btn{
+        margin:0px;
+    }
+  }
+  @media (max-width: 800px){
+    #large{
+        width: 330px;
+    }
+
+    }
