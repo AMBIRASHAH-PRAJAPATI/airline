@@ -250,7 +250,7 @@ background: linear-gradient(45deg, rgba(200,221,152,1) 0%, rgba(207,206,221,1) 6
 
 footer {
     background-color: white;
-    padding: 50px;
+    padding: 50px 50px 10px 50px;
 }
 
 /* .ft{
@@ -265,8 +265,12 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    overflow: hidden;
 }
-
+.ft #listsome{height: 0px;}
+.ft .showlistsome{
+    height: auto !important;
+}
 #footheading div,
 #listsome div {
     width: 25%;
@@ -294,4 +298,100 @@ footer {
 
 .orange {
     color: rgb(252, 81, 18);
+}
+
+/* for mobile */
+@media screen and (max-width:710px) {
+    #navbar{
+        display: block;
+    }
+    #logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 50px;
+        box-sizing: border-box;
+    }
+    #opennav {
+        height: 30px;
+        width: 35px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    #opennav::before {
+        content: "";
+        position: absolute;
+        height: 3.5px;
+        width: 35px;
+        background-color: rgb(0, 0, 0);
+        top: 0;
+        left: 4px;
+        transition: all .5s;
+    }
+    
+    #opennav::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 35px;
+        background-color: rgb(0, 0, 0);
+        bottom: -0px;
+        left: 4px;
+        box-shadow: 0 -12px 0px rgb(0, 0, 0);
+        transition: all .5s;
+    }
+    
+    /* after click */
+    
+    #logo .closenav::before {
+        transform: translateY(12px) rotate(45deg);
+    }
+    
+    #logo .closenav::after {
+        transform: translateY(-13px)translateX(-1px) rotate(-45deg);
+        box-shadow: none;
+    }
+    
+
+    .navR {
+        position: absolute;
+        display: none;
+        text-align: left;
+        width: 100%;
+        margin-top: 10px;
+        left: 0;
+        background-color: rgb(255, 252, 245);
+        padding: 10px;
+    }
+    .navR li{
+        margin: 10px;
+        padding: 3px;
+    }
+    .navR li:hover{
+        background-color: rgb(205, 232, 255); 
+        text-decoration: underline wavy hotpink;
+    }
+    .lowerbody {
+        width: 95%;
+    }
+    
+}
+@media screen and (max-width:450px){
+    .flight, .item{
+        width: auto;
+        min-width:279px;
+    }
+    .flights-sec {
+        width: 100%;
+    }
+    .route-sec {
+        width: 100%;
+        padding:4% 2% 4% 3.5%;
+        box-sizing: border-box;
+    }
+    .rutes{
+        justify-content: flex-start;
+    }
+     
 }
