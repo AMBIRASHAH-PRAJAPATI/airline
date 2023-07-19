@@ -294,8 +294,6 @@ footer {
     color: rgb(141, 140, 140);
     padding: 10px;
 }
-
-
 .orange {
     color: rgb(252, 81, 18);
 }
@@ -329,7 +327,6 @@ footer {
         left: 4px;
         transition: all .5s;
     }
-    
     #opennav::after {
         content: "";
         position: absolute;
@@ -341,9 +338,7 @@ footer {
         box-shadow: 0 -12px 0px rgb(0, 0, 0);
         transition: all .5s;
     }
-    
     /* after click */
-    
     #logo .closenav::before {
         transform: translateY(12px) rotate(45deg);
     }
@@ -352,8 +347,6 @@ footer {
         transform: translateY(-13px)translateX(-1px) rotate(-45deg);
         box-shadow: none;
     }
-    
-
     .navR {
         position: absolute;
         display: none;
@@ -374,8 +367,7 @@ footer {
     }
     .lowerbody {
         width: 95%;
-    }
-    
+    }  
 }
 @media screen and (max-width:450px){
     .flight, .item{
