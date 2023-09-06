@@ -3,17 +3,30 @@
     padding: 0;
     /* font-family: 'cursive'; */
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
+body::-webkit-scrollbar,.scroll-container::-webkit-scrollbar{
+    display: none;
+}
 body {
     background-color: rgb(242, 242, 242);
     font-family: 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Abril Fatface', cursive;
+font-family: 'Arvo', serif;
+font-family: 'Assistant', sans-serif;
+font-family: 'Cedarville Cursive', cursive;
+font-family: 'Dongle', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'Quicksand', sans-serif;
 }
 
 #navbar {
     width: 100%;
     display: flex;
-    /* display: none; */
-
+    z-index:10000;
     align-items: center;
     position: fixed;
     top: 0px;
@@ -93,12 +106,35 @@ background: linear-gradient(45deg, rgba(200,221,152,1) 0%, rgba(207,206,221,1) 6
     font-weight: 30;
     margin: 20px;
 }
-
+.scroll{
+    position: relative;
+}
+.rightmove, .leftmove { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(73, 73, 73, 0.174);
+    border-radius: 50%;
+    font-size:25px;
+    cursor: pointer;
+}
+.leftmove{
+    top: 40%;
+    left: 0px;
+}
+.rightmove {
+    top: 40%;
+    right: 0;
+}
 .scroll-container {
     display: flex;
     overflow-x: scroll;
     height: 300px;
-    padding: 2px 50px 2px 50px;
+    padding: 2px 10px 2px 10px;
+    scroll-behavior: smooth;
 }
 
 .scroll-pic {
@@ -245,20 +281,10 @@ background: linear-gradient(45deg, rgba(200,221,152,1) 0%, rgba(207,206,221,1) 6
     text-decoration: none;
 }
 
-
-
-
 footer {
     background-color: white;
-    padding: 50px 50px 10px 50px;
+    padding: 50px 60px 40px 104px;
 }
-
-/* .ft{
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-   
-} */
 
 #footheading,
 #listsome {
@@ -266,6 +292,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     overflow: hidden;
+    font-size: 14px;
 }
 .ft #listsome{height: 0px;}
 .ft .showlistsome{
@@ -274,28 +301,83 @@ footer {
 #footheading div,
 #listsome div {
     width: 25%;
-    font-weight: 70;
-    text-align: center;
+    text-transform: capitalize;
 
 }
 
-.ft img {
-    display: block;
-    /* margin: 30px 667px; */
-    margin:10px 50% 10px 50%;
-    /* align-items: center; */
-    float: center;
+.ft #fotermore{
+    position: relative;
+    padding: 50px 0px;
 }
-
+#fotermore img:first-child{
+    width: 100%;
+}
+.ft #fotermore img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }  
+#morefotter{
+    cursor: pointer;
+}
 #listsome div li,
 #listsome div a {
-    text-decoration: none;
     list-style: none;
-    color: rgb(141, 140, 140);
-    padding: 10px;
+    padding: 10px 0px;
+}
+.ft2,.ft3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: rgba(128, 128, 128, 0.556);
+    font-size: 14px;
+    row-gap:15px;
+    padding: 50px 0px 10px 0px;
+}
+.ft2 img{
+    width: 182px;
+    padding-right:15%;
+}
+.ft2 a{
+    font-weight: 600;
+    color: #5C0FD9;
+    padding: 0px 10px;
+}
+.ft2 a:nth-child(2){
+    border-left: 1px solid rgba(128, 128, 128, 0.579);
+}
+.downloadlink{
+    font-size: 18px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-weight: 700;
+    word-spacing: -0.9px;
+}
+.socialmedia{
+    display: flex;
+    gap:30px;
+}
+.downloadlink img{
+    width: 140px;
 }
 .orange {
     color: rgb(252, 81, 18);
+}
+
+@media screen and (max-width:910px) {
+#footheading div, #listsome div {
+    padding: 0px 0px 15px 30px;
+    width: 100%;
+    font-weight: 500;
+    text-align: start;
+}
+#listsome div a {
+    color: black;
+}
 }
 
 /* for mobile */
@@ -365,9 +447,15 @@ footer {
         background-color: rgb(205, 232, 255); 
         text-decoration: underline wavy hotpink;
     }
+    footer {
+        padding: 50px 10px 40px 10px;
+    }
     .lowerbody {
         width: 95%;
     }  
+    .ft2, .ft3{
+        justify-content: center
+    }
 }
 @media screen and (max-width:450px){
     .flight, .item{
